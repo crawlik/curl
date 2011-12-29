@@ -38,7 +38,7 @@ CHARSET=ISO8859-1
 HTTP over proxy with too long IDN host name
  </name>
  <command>
-http://too-long-IDN-name-cürl-rüles-la-la-la-dee-da-flooby-nooby.local/page/1035 -x %HOSTIP:%HTTPPORT
+http://too-long-idn-name-cürl-rüles-la-la-la-dee-da-flooby-nooby.local/page/1035 -x %HOSTIP:%HTTPPORT
 </command>
 </client>
 
@@ -50,7 +50,7 @@ http://too-long-IDN-name-cürl-rüles-la-la-la-dee-da-flooby-nooby.local/page/1035
 </strip>
 <protocol>
 GET http://too-long-IDN-name-cürl-rüles-la-la-la-dee-da-flooby-nooby.local/page/1035 HTTP/1.1
-Host: too-long-IDN-name-cürl-rüles-la-la-la-dee-da-flooby-nooby.local
+Host: too-long-idn-name-cürl-rüles-la-la-la-dee-da-flooby-nooby.local
 Accept: */*
 Proxy-Connection: Keep-Alive
 

@@ -104,6 +104,15 @@ static int https_getsock(struct connectdata *conn,
 #define https_connecting(x,y) CURLE_COULDNT_CONNECT
 #endif
 
+void strtolower(char str[]) {
+  while(*str != 0) {
+    if (*str >= 'A' && *str <= 'Z') {
+      *str = *str + 'a' - 'A';
+    }
+    str++;
+  }
+}
+
 /*
  * HTTP handler interface.
  */
@@ -1667,6 +1676,7 @@ CURLcode Curl_http(struct connectdata *conn, bool *done)
   const char *ppath = data->state.path;
   bool paste_ftp_userpwd = FALSE;
   char ftp_typecode[sizeof("/;type=?")] = "";
+  strtolower(conn->host.name);
   const char *host = conn->host.name;
   const char *te = ""; /* transfer-encoding */
   const char *ptr;
